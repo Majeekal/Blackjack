@@ -28,11 +28,18 @@ public class Deck {
 		return cards.size();
 	}
 
+	public void shuffle() {
+		Collections.shuffle(cards);
+	}
+
 	public Card dealCard() {
 		return cards.remove(0);
 	}
 
-	public void shuffle() {
-		((Deck) cards).shuffle();
+	@Override
+	public String toString() {
+		return "" + cards;
 	}
+	
+	
 }

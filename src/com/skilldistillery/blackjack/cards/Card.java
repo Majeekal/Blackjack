@@ -1,15 +1,14 @@
 package com.skilldistillery.blackjack.cards;
 
 public class Card {
-	
-	// F i e l d s 
-	
-	
+
+	// F i e l d s
+
 	private Suit suit;
 	private Rank rank;
-	
-	// M e t h o d s 
-	
+
+	// M e t h o d s
+
 	public Card(Suit suit, Rank rank) {
 		this.suit = suit;
 		this.rank = rank;
@@ -18,12 +17,31 @@ public class Card {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append(rank);
+		if (rank != Rank.JACK && rank != Rank.QUEEN && rank != Rank.KING && rank != Rank.ACE) {
+			builder.append(rank.getValue());
+		} else {
+			switch (rank) {
+			case JACK:
+				builder.append("Jack");
+				break;
+			case QUEEN:
+				builder.append("Queen");
+				break;
+			case KING:
+				builder.append("King");
+				break;
+			case ACE:
+				builder.append("Ace");
+				break;
+			default:
+				System.out.println("Something went heywire!");
+			}
+		}
 		builder.append(" of ");
 		builder.append(suit);
 		return builder.toString();
 	}
-	
+
 	public int getValue() {
 		return rank.getValue();
 	}
@@ -52,10 +70,5 @@ public class Card {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
-	
 
 }
