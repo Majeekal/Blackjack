@@ -11,6 +11,7 @@ public abstract class Player {
 	// M e t h o d s 
 	
 	public void hit(Card card) {
+		hand.addCard(card);
 	}
 
 	public String getName() {
@@ -26,12 +27,7 @@ public abstract class Player {
 	}
 
 	public Hand getHand() {
-		return this.hand;
+		return hand;
 	}
 	public abstract void getHand(boolean hidden);
-
-	
-	
-	
-
 }

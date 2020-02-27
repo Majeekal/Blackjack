@@ -87,6 +87,7 @@ public class BlackjackApp {
 				choice = kb.nextInt();
 				switch (choice) {
 				case 1:
+					choice = playerTurn();
 					player.hit(deck.dealCard());
 					printPlayerHand();
 					if (player.getHand().isBlackjack()) {
@@ -134,6 +135,11 @@ public class BlackjackApp {
 		}
 
 	}
+	private int playerTurn() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 	private void printPlayerHand() {
 		System.out.println(player.getName() + "'s Hand\n-----------");

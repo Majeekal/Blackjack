@@ -1,8 +1,6 @@
 package com.skilldistillery.blackjack.players;
 
-import com.skilldistillery.blackjack.cards.Card;
 import com.skilldistillery.blackjack.hand.BlackjackHand;
-import com.skilldistillery.blackjack.hand.Hand;
 
 public class BlackjackPlayer extends Player {
 	
@@ -15,19 +13,12 @@ public class BlackjackPlayer extends Player {
 	}
 
 	@Override
-	public void hit(Card card) {
-		hand.addCard(card);
-	}
-
-	public Hand getHand() {
-		return hand;
+	public void getHand(boolean hidden) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
-	public void getHand(boolean hidden) {
-		
-		// TODO Auto-generated method stub
-	}
 
 	
 	

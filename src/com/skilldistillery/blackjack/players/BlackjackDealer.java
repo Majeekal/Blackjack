@@ -1,8 +1,6 @@
 package com.skilldistillery.blackjack.players;
 
-import com.skilldistillery.blackjack.cards.Card;
 import com.skilldistillery.blackjack.cards.Deck;
-import com.skilldistillery.blackjack.hand.BlackjackHand;
 import com.skilldistillery.blackjack.hand.Hand;
 
 public class BlackjackDealer extends BlackjackPlayer {
@@ -10,8 +8,8 @@ public class BlackjackDealer extends BlackjackPlayer {
 	private Deck deck;
 
 	public BlackjackDealer() {
+		super();
 		deck = new Deck();
-		hand = new BlackjackHand();
 	}
 
 	public Hand initialDeal(Hand playerHand) {
@@ -22,23 +20,12 @@ public class BlackjackDealer extends BlackjackPlayer {
 		return playerHand;
 	}
 
-	@Override
-	public void hit(Card card) {
-		hand.addCard(card);
-	}
+	
 
 	public Deck getDeck() {
 		return deck;
 	}
-
-	public void setDeck(Deck deck) {
-		this.deck = deck;
-	}
 	
-	public Hand getHand() {
-		return hand;
-	}
-
 	public void getHand(boolean hidden) {
 		if (hidden) {
 			StringBuilder sb = new StringBuilder();
@@ -48,10 +35,6 @@ public class BlackjackDealer extends BlackjackPlayer {
 		} else {
 			System.out.println(hand);
 		}
-	}
-
-	public void setHand(Hand hand) {
-		this.hand = hand;
 	}
 
 }

@@ -24,7 +24,13 @@ public abstract class Hand {
 		cards = new ArrayList<>();
 	}
 	
-	public abstract int getHandValue();
+	public int getHandValue() {
+		int handValue = 0;
+		for (Card Card : getCards()) {
+			handValue += Card.getValue();
+		}
+		return handValue;
+	}
 
 	@Override
 	public String toString(){
