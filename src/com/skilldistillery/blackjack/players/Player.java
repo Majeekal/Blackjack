@@ -10,6 +10,12 @@ public abstract class Player {
 	String name;
 	// M e t h o d s 
 	
+	public void printHand() {
+		System.out.println(getName() + "'s Hand\n-----------");
+		System.out.println(getHand());
+		System.out.println("Total: " + getHand().getHandValue() + "\n");
+	}
+	
 	public void hit(Card card) {
 		hand.addCard(card);
 	}

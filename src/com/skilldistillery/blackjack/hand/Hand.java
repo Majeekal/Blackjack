@@ -73,9 +73,4 @@ public abstract class Hand {
 	public abstract boolean isBlackjack();
 
 	public abstract boolean isBust();
-
-	
-
-	
-	
 }

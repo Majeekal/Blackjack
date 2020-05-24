@@ -36,5 +36,18 @@ public class BlackjackDealer extends BlackjackPlayer {
 			System.out.println(hand);
 		}
 	}
-
+	
+	public void printHand(boolean hidden) {
+		int value;
+		
+		if(hidden) {
+			value = getHand().getHandValue() - hand.getCards().get(0).getValue();
+		} else {
+			value = getHand().getHandValue();
+		}
+		
+		System.out.println("Dealer Hand\n-----------");
+		getHand(hidden);
+		System.out.println("Total: " + value + "\n");
+	}
 }

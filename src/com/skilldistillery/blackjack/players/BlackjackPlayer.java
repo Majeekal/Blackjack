@@ -17,9 +17,4 @@ public class BlackjackPlayer extends Player {
 		// TODO Auto-generated method stub
 		
 	}
-
-	
-
-	
-	
 }
