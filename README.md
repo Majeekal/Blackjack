@@ -1,4 +1,4 @@
-EDIT BY MAJEEKAL: This source code including this read me is not made by me. This project is an updated version of bug fixes and layout with the consent of the creator (Devin ooper)
+EDIT BY MAJEEKAL: This source code including this read me is not made by me. This project is an updated version of bug fixes and layout with the consent of the creator (Devin Cooper)
 
 ## Blackjack Project - Week 4 Skill Distillery
 
